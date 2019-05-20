@@ -2,12 +2,15 @@ import React, {Component} from 'react'
 
 class Nav extends Component{
     render(){
+      //넘어온 data를 this.props.data로 사용한다.
+      const list = this.props.data.map(e => {
+          return <li><a href={"/content/"+e.id}>{e.title}</a></li>
+      });
+      
       return(
         <nav>
           <ul>
-              <li><a href="1.html">HTML</a></li>
-              <li><a href="2.CSS">CSS</a></li>
-              <li><a href="3.JS">JavaScript</a></li>
+              {list}
           </ul>
       </nav>
       );
