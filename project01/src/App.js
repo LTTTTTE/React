@@ -3,6 +3,8 @@ import React,{Component} from 'react';
 import Test from './components/Test.js'
 import Test02 from './components/Test02.js'
 import FuncCompTest from './components/FuncCompTest'
+import FuncCompTest02 from './components/FuncCompTest02'
+import CompStateSet from './components/CompStateSet'
 import './App.css';
 
 class App extends Component{
@@ -12,7 +14,9 @@ class App extends Component{
     this.state ={
       test :{element01: <h2>Hello</h2> , element02 : <p>Im P Tag</p>},
       test02 :{title : "제목이름" , content : "내용.."},
-      FuncCompTest : {arg1 : "Test문자열",arg2 : 4885 , arg3 : <div>DIV TAG 시다.</div>}
+      FuncCompTest : {arg1 : "Test문자열",arg2 : 4885 , arg3 : <div>DIV TAG 시다.</div>},
+      FuncCompTest02 :{arg1 : "uiopuiop" , arg2 : <button/>},
+      TestArray : { arg1 : "원소1",arg2 : "원소2" , arg3 :"원소3",arg4:"원소4"}
     }
   }
 
@@ -36,8 +40,10 @@ class App extends Component{
       <Test data = {this.state.test}/>
       <Test02 data = {this.state.test02} />
       <FuncCompTest data = {this.state.FuncCompTest}/>
+      <FuncCompTest02 data = {this.state.FuncCompTest02} data2 = {this.state.TestArray}/>
+      <CompStateSet/>
     </div>
-    
+    //  data2 = {this.state.TestArray}
   );
   }
 }
