@@ -5,6 +5,7 @@ import Test02 from './components/Test02.js'
 import FuncCompTest from './components/FuncCompTest'
 import FuncCompTest02 from './components/FuncCompTest02'
 import CompStateSet from './components/CompStateSet'
+import Tick from './components/Tick'
 import './App.css';
 
 class App extends Component{
@@ -16,7 +17,8 @@ class App extends Component{
       test02 :{title : "제목이름" , content : "내용.."},
       FuncCompTest : {arg1 : "Test문자열",arg2 : 4885 , arg3 : <div>DIV TAG 시다.</div>},
       FuncCompTest02 :{arg1 : "uiopuiop" , arg2 : <button/>},
-      TestArray : { arg1 : "원소1",arg2 : "원소2" , arg3 :"원소3",arg4:"원소4"}
+      TestArray : { arg1 : "원소1",arg2 : "원소2" , arg3 :"원소3",arg4:"원소4"},
+      Tick :{date : new Date()}
     }
   }
 
@@ -42,6 +44,7 @@ class App extends Component{
       <FuncCompTest data = {this.state.FuncCompTest}/>
       <FuncCompTest02 data = {this.state.FuncCompTest02} data2 = {this.state.TestArray}/>
       <CompStateSet/>
+      <Tick data = {this.state.Tick}/>
     </div>
     //  data2 = {this.state.TestArray}
   );
